@@ -1,1 +1,4 @@
+# Developer dependencies #
 node_modules
+dist/**
+.cache/**
