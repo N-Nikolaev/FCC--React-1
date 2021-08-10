@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel serve src/index.html",
-    "build": "parcel build src/index.html --public-url ."
+    "build": "rm -rf docs && parcel build src/index.html -d docs --public-url ."
   },
   "keywords": [],
   "author": "",
