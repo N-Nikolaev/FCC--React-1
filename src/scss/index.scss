@@ -1,7 +1,33 @@
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
 
 // Colors
 
-$bg-1: hsl(177, 25%, 63%);
+$bg-1:          hsl(177, 25%, 63%);
+
+$bg-card:       hsl(159, 100%, 97%);
+
+
+// Fonts
+
+$font-inter:    'Inter', sans-serif;
+$font-lexend:   'Lexend Deca', sans-serif;
+
+
+// Breakpoints
+
+$br--desktop:   1024px;
+
+// Mixins
+
+@mixin mq {
+    @media (min-width: $br--desktop) {
+        @content;
+    }
+}
+
+//------------------------------------------------------------//
 
 // Reset
 
@@ -11,10 +37,30 @@ $bg-1: hsl(177, 25%, 63%);
     box-sizing: border-box;
 }
 
+
+// Style
+
 body {
+    font-family: $font-lexend;
+    
+}
+
+.app {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    color: $bg-1;
+
     background-color: $bg-1;
 }
 
-.App {
-    color: white;  // Temp styling
+.card {
+    background: $bg-card;
 }
