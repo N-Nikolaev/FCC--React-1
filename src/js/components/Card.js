@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 
 
 const Card = () => {
@@ -42,7 +44,7 @@ const Card = () => {
                 id="tweet-quote"
                 href="twitter.com/intent/tweet" 
                 target="_blank">
-                <i>i</i>
+                <FontAwesomeIcon icon={faTwitterSquare} />
             </a>
             <button
                 className="btn"
