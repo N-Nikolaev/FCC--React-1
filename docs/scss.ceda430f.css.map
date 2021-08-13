@@ -1,1 +1,0 @@
-{"version":3,"sources":["scss\\index.scss"],"names":[],"mappings":"AAEA,GACI","file":"scss.ceda430f.css","sourceRoot":"..\\src","sourcesContent":["$danger: red;\r\n\r\nh1 {\r\n    color: $danger;\r\n}"]}
