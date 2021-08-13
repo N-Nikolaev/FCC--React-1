@@ -19,6 +19,12 @@ $font-lexend:   'Lexend Deca', sans-serif;
 
 $br--desktop:   1024px;
 
+
+// Miscellaneous
+
+$border-radius: 4px;
+
+
 // Mixins
 
 @mixin mq {
@@ -63,4 +69,10 @@ body {
 
 .card {
     background: $bg-card;
+    border-radius: $border-radius;
+}
+
+.footer {
+    color: black;
+    text-align: center;
 }
