@@ -1,12 +1,20 @@
 // Imports
+@use 'sass:map';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
 
 
 // Colors
 
-$bg-1:          hsl(177, 25%, 63%);
+// $bg-1:          hsl(177, 25%, 63%);
 
-$bg-card:       hsl(159, 100%, 97%);
+$color-themes: (
+    pink:       hsl(308, 100%, 81%),
+    yellow:     hsl(41, 99%, 67%),
+    red:    	hsl(0, 100%, 71%),
+    blue:       hsl(191, 96%, 63%),
+    green:      hsl(164, 76%, 47%),
+);
+$color-card:       hsl(159, 100%, 97%);
 
 
 // Fonts
@@ -33,6 +41,24 @@ $border-radius: 4px;
     }
 }
 
+@mixin theme($color) {
+
+}
+
+// Utilities
+
+@each $key, $theme in $color-themes {
+    .theme--#{$key} {
+        color: $theme;
+
+        border-color: $theme;
+        background-color: $theme !important;
+
+        svg { color: $theme; }
+    }
+}
+
+
 //------------------------------------------------------------//
 
 // Reset
@@ -46,9 +72,9 @@ $border-radius: 4px;
 
 // Style
 
-body {
-    font-family: $font-lexend;
-    
+body { 
+    font-family: $font-lexend; 
+    font-size: 16px;
 }
 
 .app {
@@ -61,18 +87,50 @@ body {
     display: grid;
     justify-content: center;
     align-items: center;
-
-    color: $bg-1;
-
-    background-color: $bg-1;
+    padding: 20px;
 }
 
 .card {
-    background: $bg-card;
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+
+    background: $color-card;
+    border-radius: $border-radius;
+
+    &__content {
+        display: grid;
+        
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        margin-bottom: 15px;
+
+        font-size: 20px;
+        text-align: center;;
+    }
+
+    &__author { text-align: right; }
+
+    &__buttons {
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+}
+
+.btn {
+    padding: 8px 12px;
+
+    color: $color-card;
+
+    border: none;
     border-radius: $border-radius;
 }
 
 .footer {
-    color: black;
+    margin-top: 10px;
+
+    color: $color-card;
     text-align: center;
 }

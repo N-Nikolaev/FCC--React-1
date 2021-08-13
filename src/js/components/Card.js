@@ -27,9 +27,9 @@ const Card = () => {
             { loading && <span>Loading</span> }
             { 
                 data && 
-                <blockquote>
+                <blockquote className="card__content">
                     <h1 
-                        className="card__content" 
+                        className="card__text" 
                         id="text">
                         {data.content}
                     </h1>
@@ -40,18 +40,22 @@ const Card = () => {
                     </cite>
                 </blockquote> 
             }
-            <a 
-                id="tweet-quote"
-                href="twitter.com/intent/tweet" 
-                target="_blank">
-                <FontAwesomeIcon icon={faTwitterSquare} />
-            </a>
-            <button
-                className="btn"
-                id="new-quote"
-                onClick={fetchData}>
-                New Quote
-            </button>
+            <div className="card__buttons">
+                <a 
+                    id="tweet-quote"
+                    href="twitter.com/intent/tweet" 
+                    target="_blank">
+                    <FontAwesomeIcon 
+                        icon={faTwitterSquare}
+                        size="3x" />
+                </a>
+                <button
+                    className="btn"
+                    id="new-quote"
+                    onClick={fetchData}>
+                    New Quote
+                </button>
+            </div>
         </main>
     )
 }
