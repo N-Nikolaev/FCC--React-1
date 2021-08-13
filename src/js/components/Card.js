@@ -1,39 +1,55 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 
-const useFetch = url => {
-    const [data, setData] = useState(null);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        fetch(url)
-            .then(response => {
-                return response.json();
-            })
-            .then(data => {
-                setData(data);
-                setLoading(false);
-            });
-    }, []);
-
-    return { data, loading };
-}
 
 const Card = () => {
     const url = 'https://api.quotable.io/random';
-    const { data, loading } = useFetch(url);
-    
-    console.log( data );
+    const [data, setData] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    const fetchData = useCallback(() => {
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                setData(data);
+                setLoading(false);
+            })
+            .catch(error => console.log(error));
+    }, []);
+
+    useEffect(() => {
+        fetchData();
+    }, [fetchData])
 
     return (
         <main className="card" id="quote-box">
-            { loading && <div>Loading</div> }
+            { loading && <span>Loading</span> }
             { 
                 data && 
                 <blockquote>
-                    <p>{data.content}</p>
-                    <cite>{data.author}</cite>
+                    <h1 
+                        className="card__content" 
+                        id="text">
+                        {data.content}
+                    </h1>
+                    <cite 
+                        className="card__author" 
+                        id="author">
+                        - {data.author}
+                    </cite>
                 </blockquote> 
             }
+            <a 
+                id="tweet-quote"
+                href="twitter.com/intent/tweet" 
+                target="_blank">
+                <i>i</i>
+            </a>
+            <button
+                className="btn"
+                id="new-quote"
+                onClick={fetchData}>
+                New Quote
+            </button>
         </main>
     )
 }
