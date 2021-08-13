@@ -24,7 +24,12 @@ const Card = () => {
 
     return (
         <main className="card" id="quote-box">
-            { loading && <span>Loading</span> }
+            { 
+                loading && 
+                <div className="card__content">
+                    <span>Loading</span> 
+                </div>
+            }
             { 
                 data && 
                 <blockquote className="card__content">
