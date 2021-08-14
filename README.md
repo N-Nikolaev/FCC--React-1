@@ -58,6 +58,7 @@ The design of the project was taken from the sample project provided by Free Cod
 - Parcel was used to bundle all the files to reduce file size
 - The quotes we retrieved using the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) from the ["Quotable" API](https://github.com/lukePeavey/quotable)
 - Uses CSS variables to change the theming of the application
+- Displays a loading animation for the first API request
 - And is mobile responsive
 
 ## Getting started
@@ -100,14 +101,15 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ### Useful resources
 
-1. [Why you should be using Parcel.js for React, Sass, CSS, Vue, and more](https://www.youtube.com/watch?v=sIXxgnEYsQc)
-2. [Add SASS to React](https://medium.com/nerd-for-tech/add-sass-to-your-react-app-in-2021-here-is-how-c7260c323a5a)
-3. [Add SASS to a barebones React project](https://www.freecodecamp.org/news/how-to-up-a-react-app-with-parcel/)
-4. [Fetching Data with React Hooks useEffect](https://www.youtube.com/watch?v=qdCHEUaFhBk)
-5. [React hooks fetch data](https://www.youtube.com/watch?v=qdCHEUaFhBk)
-6. [Dark theme in a day](https://mwichary.medium.com/dark-theme-in-a-day-3518dde2955a)
-7. [Call Parent Function from Child Component](https://www.youtube.com/watch?v=QmZ5baNgZLc)
-8. [Best README Template](https://github.com/othneildrew/Best-README-Template)
+1. [FCC - Random Quote Machine Example Project](https://codepen.io/freeCodeCamp/full/qRZeGZ)
+2. [Why you should be using Parcel.js for React, Sass, CSS, Vue, and more](https://www.youtube.com/watch?v=sIXxgnEYsQc)
+3. [Add SASS to React](https://medium.com/nerd-for-tech/add-sass-to-your-react-app-in-2021-here-is-how-c7260c323a5a)
+4. [Add SASS to a barebones React project](https://www.freecodecamp.org/news/how-to-up-a-react-app-with-parcel/)
+5. [Fetching Data with React Hooks useEffect](https://www.youtube.com/watch?v=qdCHEUaFhBk)
+6. [React hooks fetch data](https://www.youtube.com/watch?v=qdCHEUaFhBk)
+7. [Dark theme in a day](https://mwichary.medium.com/dark-theme-in-a-day-3518dde2955a)
+8. [Call Parent Function from Child Component](https://www.youtube.com/watch?v=QmZ5baNgZLc)
+9. [Best README Template](https://github.com/othneildrew/Best-README-Template)
 
 ## Author
 
