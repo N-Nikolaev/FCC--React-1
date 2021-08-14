@@ -15,7 +15,6 @@ const Card = ({ theme }) => {
                 setData(data);
                 setLoading(false);
             })
-            // .then(() => theme())
             .catch(error => console.log(error));
         theme();
     }, []);
@@ -59,7 +58,7 @@ const Card = ({ theme }) => {
             <div className="card__buttons">
                 <a 
                     id="tweet-quote"
-                    href="twitter.com/intent/tweet" 
+                    href="https://twitter.com/intent/tweet" 
                     target="_blank">
                     <FontAwesomeIcon 
                         icon={faTwitterSquare}
