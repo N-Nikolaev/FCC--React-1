@@ -27,7 +27,16 @@ const Card = () => {
             { 
                 loading && 
                 <div className="card__content">
-                    <span>Loading</span> 
+                    <div className="loading">
+                        <div className="loading__element"></div>
+                        <div className="loading__element"></div> 
+                        <div className="loading__element"></div> 
+                        <div className="loading__element"></div> 
+                        <div className="loading__element"></div> 
+                        <div className="loading__element"></div> 
+                        <div className="loading__element"></div> 
+                        <div className="loading__element"></div>    
+                    </div> 
                 </div>
             }
             { 

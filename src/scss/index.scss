@@ -90,6 +90,52 @@ body {
     padding: 20px;
 }
 
+.loading {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+
+    &__element {
+        height: 0;
+        width: 4px;
+        margin: 3px;
+
+        border-radius: 5px;
+
+        animation: loading 0.8s ease-in-out infinite;
+
+        &:nth-child(2) { animation-delay: 0.1s; }
+
+        &:nth-child(3) { animation-delay: 0.2s; }
+
+        &:nth-child(4) { animation-delay: 0.3s; }
+
+        &:nth-child(5) { animation-delay: 0.4s; }
+
+        &:nth-child(6) { animation-delay: 0.5s; }
+
+        &:nth-child(7) { animation-delay: 0.6s; }
+
+        &:nth-child(8) { animation-delay: 0.7s; }
+    }
+
+    @keyframes loading {
+        0% {
+            height: 0px;
+        }
+        50% {
+            height: 40px;
+            background-color: map_get($color-themes, blue);
+        }
+        100% {
+            height: 0px;
+        }
+    }
+
+}
+
 .card {
     padding: 30px;
     max-width: 600px;
@@ -127,6 +173,8 @@ body {
 
     border: none;
     border-radius: $border-radius;
+
+    &:hover { cursor: pointer; }
 }
 
 .footer {
@@ -145,7 +193,12 @@ a {
 
     @keyframes bounce {
         15% { transform: translateY(-6px); }
-        50% { transform: translateY(-10px); }
+        50% { transform: translateY(-8px); }
         65% { transform: translateY(-6px); }
     }
 }
+
+
+// Pointer change on button hover
+// Theme-ing
+// Loading animation
