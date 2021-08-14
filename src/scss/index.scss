@@ -4,13 +4,15 @@
 
 // Colors
 
-// $bg-1:          hsl(177, 25%, 63%);
-
 $theme-pink:       hsl(308, 100%, 81%);
 $theme-yellow:     hsl(41, 99%, 67%);
+$theme-orange:     hsl(29, 95%, 60%);
 $theme-red:    	   hsl(0, 100%, 71%);
 $theme-blue:       hsl(191, 96%, 63%);
 $theme-green:      hsl(164, 76%, 47%);
+$theme-purple:     hsl(260, 68%, 48%);
+$theme-gray:       hsl(218, 9%, 50%);
+$theme-black:      hsl(221, 17%, 22%);
 
 $color-card:       hsl(159, 100%, 97%);
 
@@ -39,23 +41,6 @@ $border-radius: 4px;
     }
 }
 
-@mixin theme($color) {
-
-}
-
-// Utilities
-
-// @each $key, $theme in $color-themes {
-//     .theme--#{$key} {
-//         color: $theme;
-
-//         border-color: $theme;
-//         background-color: $theme !important;
-
-//         svg { color: $theme; }
-//     }
-// }
-
 
 //------------------------------------------------------------//
 
@@ -70,28 +55,32 @@ $border-radius: 4px;
 
 // Style
 
-html {
-    --primary: #{$theme-blue};
-
-    &[data-theme='pink'] { --primary: #{$theme-pink}; }
-    
-    &[data-theme='yellow'] { --primary: #{$theme-yellow}; }
-
-    &[data-theme='red'] { --primary: #{$theme-red}; }
-
-    &[data-theme='blue'] { --primary: #{$theme-blue}; }
-
-    &[data-theme='green'] { --primary: #{$theme-green}; }
-}
+:root { --primary: #{$theme-blue}; }
 
 body { 
     font-family: $font-lexend; 
     font-size: 16px;
 }
 
-svg { color: var(--primary); }
-
 .app {
+    &[data-theme='pink'] { --primary: #{$theme-pink}; }
+    
+    &[data-theme='yellow'] { --primary: #{$theme-yellow}; }
+    
+    &[data-theme='orange'] { --primary: #{$theme-orange}; }
+
+    &[data-theme='red'] { --primary: #{$theme-red}; }
+
+    &[data-theme='blue'] { --primary: #{$theme-blue}; }
+
+    &[data-theme='green'] { --primary: #{$theme-green}; }
+
+    &[data-theme='purple'] { --primary: #{$theme-purple}; }
+
+    &[data-theme='gray'] { --primary: #{$theme-gray}; }
+
+    &[data-theme='black'] { --primary: #{$theme-black}; }
+
     position: absolute;
     top: 0;
     left: 0;
@@ -106,6 +95,10 @@ svg { color: var(--primary); }
     color: var(--primary);
 
     background-color: var(--primary);
+
+    transition: 
+        color 0.5s ease-out,
+        background-color 0.5s ease-out;
 }
 
 .loading {
@@ -163,6 +156,8 @@ svg { color: var(--primary); }
     background: $color-card;
     border-radius: $border-radius;
 
+    transition: width 0.5s ease-in-out;
+
     &__content {
         display: grid;
         
@@ -172,7 +167,7 @@ svg { color: var(--primary); }
     &__text {
         margin-bottom: 30px;
 
-        font-size: 20px;
+        font-size: 22px;
         text-align: center;;
     }
 
@@ -195,6 +190,8 @@ svg { color: var(--primary); }
     border: none;
     border-radius: $border-radius;
 
+    transition: background-color 0.5s ease-out;
+
     &:hover { cursor: pointer; }
 }
 
@@ -203,6 +200,12 @@ svg { color: var(--primary); }
 
     color: $color-card;
     text-align: center;
+}
+
+svg { 
+    color: var(--primary); 
+
+    transition: color 0.5s ease-out;
 }
 
 a {

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitterSquare } from '@fortawesome/free-brands-svg-icons';
 
 
-const Card = () => {
+const Card = ({ theme }) => {
     const url = 'https://api.quotable.io/random';
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -15,7 +15,9 @@ const Card = () => {
                 setData(data);
                 setLoading(false);
             })
+            // .then(() => theme())
             .catch(error => console.log(error));
+        theme();
     }, []);
 
     useEffect(() => {
@@ -23,7 +25,7 @@ const Card = () => {
     }, [fetchData])
 
     return (
-        <main className="card" id="quote-box">
+        <main className="card" id="quote-box" >
             { 
                 loading && 
                 <div className="card__content">
