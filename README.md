@@ -1,9 +1,8 @@
-# Free Code Camp - Random Quote Machine project
+# Random Quote Machine
 
 The following application is a quote machine that pulls random quotes from [Quotable API](https://github.com/lukePeavey/quotable) and is built using [Parcel](https://parceljs.org/), [Sass](https://sass-lang.com/) and [ReactJS](https://reactjs.org/). 
 
 ## Motivation
-
 This project was made for the [Front End Development Libraries Certification on Free Code Camp](https://www.freecodecamp.org/learn/front-end-libraries/front-end-libraries-projects/build-a-random-quote-machine).
 
 ## Table of contents
@@ -47,8 +46,8 @@ Users should be able to:
 
 ### Links
 
-- Project URL: [Github Repository](https://github.com/N-Nikolaev/FCC--React-1)
-- Live App URL: [Github Page](https://n-nikolaev.github.io/FCC--React-1)
+- Project URL: [Github Repository](https://github.com/N-Nikolaev/random-quote-machine)
+- Live App URL: [Github Page](https://n-nikolaev.github.io/random-quote-machine)
 
 ### Features
 
@@ -75,7 +74,7 @@ You are going to need the latest version of NPM in order to install this project
 
 1. Clone the repository
    ```sh
-   git clone https://github.com/N-Nikolaev/FCC--React-1.git
+   git clone https://github.com/N-Nikolaev/random-quote-machine.git
    ```
 2. Install NPM packages
    ```sh
